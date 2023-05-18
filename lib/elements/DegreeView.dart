@@ -7,40 +7,39 @@ class DegreeViewWidget extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-  return Expanded(
-   child: Column(
-     crossAxisAlignment: CrossAxisAlignment.start,
-     children: [
-     Container(
-       child: Text(
-         degree.degreeName,
-           style: TextStyle(
-             fontSize: 14,
-             fontWeight: FontWeight.bold
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
 
-           ),
-         overflow: TextOverflow.ellipsis,
-       ),
-     ),
-     Container(
-         child: Row(
-           children: [
-             Text(
-               degree.instituteName,
+    children: [
+    Container(
+      child: Text(
+        degree.degreeName,
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.bold
 
-             ),
-           ],
-         ),
-       ),
-       Text(
-         '(${degree.duration})',
+          ),
+        overflow: TextOverflow.ellipsis,
+      ),
+    ),
+    Container(
+        child: Row(
+          children: [
+            Text(
+              degree.instituteName,
 
-       ),
-       SizedBox(
-         height: 3,
-       ),
-     ],
-   ),
+            ),
+          ],
+        ),
+      ),
+      Text(
+        '(${degree.duration})',
+
+      ),
+      SizedBox(
+        height: 3,
+      ),
+    ],
   );
   }
 
